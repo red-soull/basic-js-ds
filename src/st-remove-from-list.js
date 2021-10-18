@@ -19,8 +19,17 @@ const { NotImplementedError } = require('../extensions/index.js');
  * }
  */
 
-module.exports = function removeKFromList(arr, t) {
-  // l = l.filter(x => x != k);
-  const result = arr.filter(m => m != t);
-  return result;
+module.exports = function removeKFromList(l, k) {
+    let list = l;
+
+    while (list) {
+      if(list.value == k) {
+        let prev = list.next;
+        list.value = prev.value;
+        list.next = prev.next;
+      }
+      list = list.next;
+      
+    }
+  return list;
 }
