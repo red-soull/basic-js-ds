@@ -18,10 +18,15 @@ module.exports = class Queue {
     this.queue = [];
   }
   getUnderlyingList() {
-    let list = {
-      value: this.queue[0],
-      next: this.queue[1]
-    };
+    // let oldList = new Map();
+    // for(let i = this.queue.length - 1; i > 0 ; i--) {
+    //   let list = {
+    //       value: this.queue[i],
+    //       next: oldList
+    //     }
+    //     oldList = list;
+    // }
+    
     return list;
   }
 
